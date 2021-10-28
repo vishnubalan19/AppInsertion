@@ -1,4 +1,4 @@
-//package example;
+package com.app.insert;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,6 +35,8 @@ public class Hello {
 
         //client for docker's influx
         InfluxDBClient client = InfluxDBClientFactory.create("http://172.22.0.2:8086", token.toCharArray());
+
+        //value insertion
         double value = 23.43234543;
         for(int i=0;i<1000000;i++){
             String data = "mem,host=host1 used_percent="+value;
